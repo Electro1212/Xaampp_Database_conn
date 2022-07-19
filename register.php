@@ -1,12 +1,22 @@
+<?php
+$conn = mysqli_connect("localhost","root","","electro");
+if(isset($_POST['sbmt'])){
+	$name = $_POST['name'];
+	$email=$_POST['email'];
+	$password=$_POST['password'];
+	$sql = "INSERT INTO `register`(`Name`, `Email`, `Password`) VALUES ('$name','$email','$password')";
+	mysqli_query($conn,$sql);
+	header("location:register.php");
+}
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
 
-
-<!-- Mirrored from affixtheme.com/html/xmee/demo/register-8.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Jul 2022 14:26:10 GMT -->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Xmee | Login and Register Form Html Templates</title>
+	<title>Register</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
@@ -32,17 +42,17 @@
             <div class='line3'></div>
         </div>
     </div>
-	<section class="fxt-template-animation fxt-template-layout8" data-bg-image="img/figure/bg8-l.jpg">
+	<section class="fxt-template-animation fxt-template-layout8" data-bg-image="img/figure/Lionel.jpg">
 		<div class="fxt-content">
 			<div class="fxt-header">
-				<a href="login-8.html" class="fxt-logo"><img src="img/logo-8.png" alt="Logo"></a>
+				<a href="login.php" class="fxt-logo"><img src="img/MessiLogo.png" alt="Logo" style="height:100px; width: 100px;"></a>
 			</div>
 			<div class="fxt-form">
 				<p>Register for create account</p>
 				<form method="post">
 					<div class="form-group">
 						<div class="fxt-transformY-50 fxt-transition-delay-1">
-							<input type="text" id="name" class="form-control" name="name" placeholder="Name" required="required">
+							<input type="text" id="name" class="form-control" name="name" placeholder="Name" required="required" >
 						</div>
 					</div>
 					<div class="form-group">
@@ -68,7 +78,7 @@
 					</div>
 					<div class="form-group">
 						<div class="fxt-transformY-50 fxt-transition-delay-4">
-							<button type="submit" class="fxt-btn-fill">Register</button>
+							<button type="submit" class="fxt-btn-fill" name="sbmt">Register</button>
 						</div>
 					</div>
 				</form>
@@ -97,7 +107,7 @@
 			</ul>
 			<div class="fxt-footer">
 				<div class="fxt-transformY-50 fxt-transition-delay-9">
-					<p>Have an account?<a href="login-8.html" class="switcher-text2 inline-text">Log in</a></p>
+					<p>Have an account?<a href="login.php" class="switcher-text2 inline-text">Log in</a></p>
 				</div>
 			</div>
 		</div>
@@ -114,7 +124,4 @@
 	<script src="js/main.js"></script>
 
 </body>
-
-
-<!-- Mirrored from affixtheme.com/html/xmee/demo/register-8.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Jul 2022 14:26:10 GMT -->
 </html>

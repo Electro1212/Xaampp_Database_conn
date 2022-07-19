@@ -42,10 +42,10 @@ if(isset($_POST['Sbmt'])){
             <div class='line3'></div>
         </div>
     </div>
-	<section class="fxt-template-animation fxt-template-layout8" data-bg-image="img/figure/bg8-l.jpg">
+	<section class="fxt-template-animation fxt-template-layout8" data-bg-image="img/figure/goat.jpg">
 		<div class="fxt-content">
 			<div class="fxt-header">
-				<a href="login-8.html" class="fxt-logo"><img src="img/logo-8.png" alt="Logo"></a>
+				<a href="login.php" class="fxt-logo"><img src="img/Barca.png" alt="Logo" style="height:100px; width: 100px; background-attachment:fixed;"></a>
 			</div>
 			<div class="fxt-form">
 				<p>Login into your account</p>
@@ -103,7 +103,7 @@ if(isset($_POST['Sbmt'])){
 			</ul>
 			<div class="fxt-footer">
 				<div class="fxt-transformY-50 fxt-transition-delay-9">
-					<p>Don't have an account?<a href="register-8.html" class="switcher-text2 inline-text">Register</a></p>
+					<p>Don't have an account?<a href="register.php" class="switcher-text2 inline-text">Register</a></p>
 				</div>
 			</div>
 		</div>
